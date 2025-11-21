@@ -1,0 +1,88 @@
+<!-- Floating Icon Navigation -->
+<nav class="floating-nav">
+  <!-- Navigation Icons -->
+  <ul class="nav-icons">
+    <li>
+      <a href="#home" class="nav-icon-link" [attr.data-tooltip]="languageService.t('nav.home')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="#about" class="nav-icon-link" [attr.data-tooltip]="languageService.t('nav.about')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="#skills" class="nav-icon-link" [attr.data-tooltip]="languageService.t('nav.skills')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="#education" class="nav-icon-link" [attr.data-tooltip]="languageService.t('nav.education')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="#experience" class="nav-icon-link" [attr.data-tooltip]="languageService.t('nav.experience')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="#work" class="nav-icon-link" [attr.data-tooltip]="languageService.t('nav.projects')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="#contact" class="nav-icon-link" [attr.data-tooltip]="languageService.t('nav.contact')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      </a>
+    </li>
+  </ul>
+
+  <!-- Divider -->
+  <div class="nav-divider"></div>
+
+  <!-- Action Icons -->
+  <div class="nav-actions">
+    <button class="action-icon" (click)="languageService.toggleLanguage()" 
+            [attr.data-tooltip]="languageService.lang() === 'fr' ? 'English' : 'Français'">
+      <span class="flag-icon">{{ languageService.lang() === 'fr' ? '🇫🇷' : '🇬🇧' }}</span>
+    </button>
+    
+    <button class="action-icon" (click)="themeService.toggleTheme()"
+            [attr.data-tooltip]="themeService.isDark() ? 'Light' : 'Dark'">
+      <svg *ngIf="!themeService.isDark()" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+      </svg>
+      <svg *ngIf="themeService.isDark()" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<main>
+  <app-hero></app-hero>
+  <app-about></app-about>
+  <app-skills></app-skills>
+  <app-education></app-education>
+  <app-experience></app-experience>
+  <app-projects></app-projects>
+  <app-art-gallery></app-art-gallery>
+  <app-freelance></app-freelance>
+  <app-contact></app-contact>
+</main>

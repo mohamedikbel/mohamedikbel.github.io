@@ -1,0 +1,105 @@
+// Modern Developer Theme - 2025 Dark-First Design
+// Inspired by VS Code, GitHub, Linear
+
+:root {
+  // Accent Colors - Electric & Technical
+  --primary: #7C3AED;
+  --primary-dark: #6D28D9;
+  --secondary: #2DD4BF;
+  --accent: #F59E0B;
+  
+  // Status Colors
+  --success: #10B981;
+  --error: #F43F5E;
+  --warning: #F59E0B;
+  --info: #3B82F6;
+  
+  // Light Theme (fallback)
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F9FAFB;
+  --bg-tertiary: #F3F4F6;
+  --bg-surface: #FFFFFF;
+  --bg-panel: #F8FAFC;
+  --bg-code: #F5F5F5;
+  
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --text-muted: #9CA3AF;
+  --text-heading: #000000;
+  --text-code: #374151;
+  
+  --border-color: #E5E7EB;
+  --border-hover: #D1D5DB;
+  
+  // Shadows - Elevated
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 20px rgba(124, 58, 237, 0.3);
+  
+  // Border Radius - Sharp & Modern
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  
+  // Gradients - Subtle & Professional
+  --gradient-1: linear-gradient(135deg, #7C3AED 0%, #9333EA 100%);
+  --gradient-2: linear-gradient(135deg, #2DD4BF 0%, #14B8A6 100%);
+  --gradient-3: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  --gradient-4: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  --gradient-5: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  --gradient-hero: linear-gradient(135deg, #0B1120 0%, #161F2E 50%, #1a2332 100%);
+  --gradient-mesh: radial-gradient(at 20% 30%, rgba(124, 58, 237, 0.15) 0px, transparent 50%),
+                   radial-gradient(at 80% 70%, rgba(45, 212, 191, 0.15) 0px, transparent 50%),
+                   radial-gradient(at 50% 50%, rgba(59, 130, 246, 0.1) 0px, transparent 50%);
+  
+  // Typography - Modern Developer Fonts
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+}
+
+// Dark Theme - Primary Theme for Developers
+[data-theme='dark'] {
+  // Base Backgrounds - Navy & Graphite
+  --bg-primary: #0B1120;
+  --bg-secondary: #161F2E;
+  --bg-tertiary: #1E2836;
+  --bg-surface: #252D3D;
+  --bg-panel: #2A3446;
+  --bg-code: #0D1117;
+  
+  // Text - High Contrast for Readability
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+  --text-heading: #FFFFFF;
+  --text-code: #C9D1D9;
+  
+  // Borders - Subtle but Defined
+  --border-color: #2A3446;
+  --border-hover: #374151;
+  
+  // Shadows - Deeper with Glow
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 30px rgba(124, 58, 237, 0.4), 0 0 60px rgba(124, 58, 237, 0.2);
+  
+  // Enhanced Gradients for Dark Mode
+  --gradient-hero: linear-gradient(135deg, #0B1120 0%, #161F2E 50%, #1a2332 100%);
+  --gradient-mesh: radial-gradient(at 20% 30%, rgba(124, 58, 237, 0.25) 0px, transparent 50%),
+                   radial-gradient(at 80% 70%, rgba(45, 212, 191, 0.25) 0px, transparent 50%),
+                   radial-gradient(at 50% 50%, rgba(59, 130, 246, 0.15) 0px, transparent 50%);
+}
+
+$breakpoints: (
+  'xs': 480px,
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+  '2xl': 1536px
+);
